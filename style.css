@@ -1,0 +1,171 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin and padding
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --fc-soft-blue: hsl(215, 51%, 70%);
+  --fc-cyan: hsl(178, 100%, 50%);
+  --bgc-main: hsl(217, 54%, 11%);
+  --bgc-card: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --fc-white: hsl(0, 0%, 100%);
+  --fs: 18px;
+  --ff: "Outfit", sans-serif;
+  --fw300: 300;
+  --fw400: 400;
+  --fw600: 600;
+}
+
+body {
+  background-color: var(--bgc-main);
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: var(--bgc-card);
+  max-width: 300px;
+  height: 70%;
+  padding: 22px;
+  border-radius: calc(var(--fs) + 2px);
+}
+
+.display-image {
+  background-image: url("images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 50%;
+  border-radius: calc(var(--fs) - 11px);
+}
+
+.content h1 {
+  color: var(--fc-white);
+  font-size: calc(var(--fs) + 4px);
+  margin: 15px 0;
+}
+
+.content h1:hover {
+  color: var(--fc-cyan);
+  cursor: pointer;
+}
+
+.content p {
+  color: var(--fc-soft-blue);
+}
+
+.content hr {
+  border: var(--line) solid 1px;
+}
+
+.price-and-day {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0;
+}
+
+#price {
+  display: flex;
+  align-items: center;
+}
+
+#price p {
+  margin-left: 7px;
+  color: var(--fc-cyan);
+}
+
+#day {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#day p {
+  margin-left: 7px;
+}
+
+.creator {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  margin-top: 20px;
+}
+
+.creator img {
+  width: 60%;
+  border: solid var(--fc-white) 1px;
+  border-radius: 50%;
+}
+
+.creator span {
+  color: var(--fc-white);
+}
+
+.creator span:hover {
+  color: var(--fc-cyan);
+  cursor: pointer;
+}
